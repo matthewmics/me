@@ -1,9 +1,8 @@
 import React from 'react'
 import './about.scss'
 import ME from '../../assets/me-about.jpg'
-import { FaAward } from 'react-icons/fa'
-import { FiUsers } from 'react-icons/fi'
-import { VscFolderLibrary } from 'react-icons/vsc'
+import { IoSchoolOutline } from 'react-icons/io5'
+import { BsBriefcase } from 'react-icons/bs'
 
 const About = () => {
   return (
@@ -19,19 +18,14 @@ const About = () => {
         <div className="about__content">
           <div className="about__cards">
             <article className='about__card'>
-              <FaAward className='about__icon'></FaAward>
+              <BsBriefcase className='about__icon'></BsBriefcase>
               <h5>Experience</h5>
-              <small>3+ Years Working</small>
+              <small>4+ Years Working</small>
             </article>
             <article className='about__card'>
-              <FiUsers className='about__icon'></FiUsers>
-              <h5>Clients</h5>
-              <small>200+ Worldwide</small>
-            </article>
-            <article className='about__card'>
-              <VscFolderLibrary className='about__icon'></VscFolderLibrary>
-              <h5>Projects</h5>
-              <small>80+ Completed Projects</small>
+              <IoSchoolOutline className='about__icon'></IoSchoolOutline>
+              <h5>Education</h5>
+              <small>Bachelor of Science in Computer Science</small>
             </article>
           </div>
 
