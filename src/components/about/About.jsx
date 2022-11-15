@@ -36,7 +36,7 @@ const About = () => {
             orem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
           </p>
 
-          <a href="#contact" className='btn btn-primary'>Let's Talk</a>
+          <a href="#contact" className='btn btn-primary'>Contact Me</a>
 
         </div>
       </div>
