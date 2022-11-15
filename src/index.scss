@@ -110,13 +110,21 @@ a {
 
 .btn-primary {
     background: var(--color-primary);
-    color: var(--color-bg);
+    color: var(--color-light);
 }
 
 img {
     display: block;
     width: 100%;
     object-fit: cover;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--color-primary-variant) !important;
+}
+
+div[class*=swiper-button] {
+    color: var(--color-primary-variant) !important;
 }
 
 /* ====== MEDIA QUERIES (MEDIUM DEVICES) */

@@ -10,6 +10,10 @@ import Contact from './components/contact/Contact'
 import Footer from './components/footer/Footer'
 import Certifications from './components/certifications/Certifications'
 
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import 'swiper/css';
+
 const App = () => {
   return (
     <>
