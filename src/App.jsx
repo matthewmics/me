@@ -1,13 +1,14 @@
 import React from 'react'
 import Header from './components/header/Header'
 import Nav from './components/nav/Nav'
-import Skills from './components/experience/Skills'
+import Skills from './components/skills/Skills'
 import About from './components/about/About'
-import Services from './components/services/Services'
+import Experiences from './components/experiences/Experiences'
 import Portfolio from './components/portfolio/Portfolio'
 import Testimonials from './components/testimonials/Testimonials'
 import Contact from './components/contact/Contact'
 import Footer from './components/footer/Footer'
+import Certifications from './components/certifications/Certifications'
 
 const App = () => {
   return (
@@ -16,8 +17,9 @@ const App = () => {
       <Nav />
       <About />
       <Skills />
-      <Services />
+      <Experiences />
       <Portfolio />
+      <Certifications />
       {/* <Contact /> */}
       <Footer />
     </>
