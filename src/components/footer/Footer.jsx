@@ -1,6 +1,7 @@
 import React from 'react'
 import './footer.scss'
 import { AiFillGithub } from 'react-icons/ai'
+import { FaKeyboard } from 'react-icons/fa'
 
 const Footer = () => {
   return (
@@ -12,7 +13,8 @@ const Footer = () => {
       </ul>
 
       <div className="footer__socials">
-        <a href="https://github.com/matthewmics"><AiFillGithub /></a>
+        <a href="https://github.com/matthewmics" target={"_blank"}><AiFillGithub /></a>
+        <a href="https://data.typeracer.com/misc/badge?user=micsmatthew77" target="_blank"><FaKeyboard /></a>
       </div>
     </footer>
   )

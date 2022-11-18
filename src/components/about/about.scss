@@ -38,6 +38,10 @@
     text-align: center;
     transition: var(--transition);
 
+    small.about__card-education-trimmed {
+        display: none;
+    }
+
     &:hover {
         background: transparent;
         border-color: var(--color-primary-variant);
@@ -98,6 +102,15 @@
     .about__cards {
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
+
+        .about__card {
+            small.about__card-education-trimmed {
+                display: initial;
+            } 
+            small.about__card-education-full-text {
+                display: none;
+            }
+        }
     }
 
     .about__content {

@@ -25,7 +25,8 @@ const About = () => {
             <article className='about__card'>
               <IoSchoolOutline className='about__icon'></IoSchoolOutline>
               <h5>Education</h5>
-              <small>Bachelor of Science in Computer Science</small>
+              <small className='about__card-education-full-text'>Bachelor of Science in Computer Science</small>
+              <small className='about__card-education-trimmed'>BS in Computer Science</small>
             </article>
           </div>
 
