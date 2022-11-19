@@ -7,21 +7,25 @@ import IMG4 from '../../assets/portfolio/spikeroll/thumbnail.png'
 import PortfolioItem from './PortfolioItem'
 import { useEffect } from 'react'
 import { useRef } from 'react'
+import { Navigation, Pagination } from 'swiper'
+import { SwiperSlide, Swiper } from 'swiper/react'
 
 const Portfolio = () => {
 
   const screenshotsModalRef = useRef(null);
 
   useEffect(() => {
-
     screenshotsModalRef.current.classList.add("hidden");
-
   }, []);
 
   const openScreenshotsModal = () => {
-    console.log("opening modal");
     document.body.classList.add('overflow-hidden');
     screenshotsModalRef.current.classList.remove("hidden");
+  }
+
+  const closeScreenshotsModal = () => {
+    document.body.classList.remove('overflow-hidden');
+    screenshotsModalRef.current.classList.add("hidden");
   }
 
   return (
@@ -50,7 +54,35 @@ const Portfolio = () => {
       </div>
 
       <div ref={screenshotsModalRef} id="portfolio__modal-screenshots">
-
+        <div className='wrapper'>
+          <div className="screenshots">
+            <Swiper
+              slidesPerView={1}
+              spaceBetween={30}
+              loop={true}
+              pagination={{
+                clickable: true,
+              }}
+              navigation={true}
+              modules={[Pagination, Navigation]}
+              className='portfolio__modal-swiper'
+            >
+              <SwiperSlide>
+                <div className='swiper-content'>
+                  test
+                  <img src="/betting/1.PNG"  />
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className='swiper-content'>
+                  test
+                  <img src="/betting/2.PNG"  />
+                </div>
+              </SwiperSlide>
+            </Swiper>
+          </div>
+          <a className='btn btn-secondary btn-close' onClick={closeScreenshotsModal}>CLOSE</a>
+        </div>
       </div>
 
     </section>

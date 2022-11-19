@@ -45,6 +45,7 @@ body {
 /* GENERAL STYLES */
 .container {
     width: var(--container-width-lg);
+    max-width: 1180px !important;
     margin: 0 auto;
 }
 

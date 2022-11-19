@@ -5,9 +5,41 @@
         position: fixed;
         top: 0%;
         bottom: 0%;
-        background: rgba(0,0,0,0.6);
-        backdrop-filter: blur(90%);
+        background: rgba(0,0,0,0.7);
+        backdrop-filter: blur(5px);
         z-index: 9999;
+        overflow: auto;
+
+        .wrapper {
+            padding: 3rem 0;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            align-items: center;
+
+            // .btn-close {
+            //     width: 
+            // }
+
+            .screenshots {
+                flex-grow: 1;
+                .portfolio__modal-swiper {
+                    
+                    .swiper-content {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+
+                        img {
+                            height: auto; width: 100vh;
+                            user-select: none;
+                        }
+                    }
+
+                }
+            }
+        }
     }
 }
 
@@ -16,9 +48,6 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 2.5rem;
     width: 60% !important;
-    // & .btn {
-    //     color: var(--color-light);
-    // }
 }
 
 .portfolio__item {
