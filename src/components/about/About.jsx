@@ -31,10 +31,19 @@ const About = () => {
           </div>
 
           <p>
-            There are many variations of passages of Lorem
-            Ipsum available, but the majority have suffered alteration in some form, by injected humour,
-            r randomised words which don't look even slightly believable. If you are going to use a passage of
-            orem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
+            Hi, I'm Matthew Miclat. I love computer programming. I started my career back in 2018 as a Java Programmer
+            and years later was able to learn different programming languages such as C# and PHP. As a fullstack developer,
+            I am also comfortable in using the popular javascript frameworks like React and Angular. I am always eager to learn 
+            new things, recently I was able to learn RPA.
+          </p>
+
+          <p>
+            These days my time is spent learning new things to elevate my skills. Currently studying docker and the proper way of
+            microservices implementation.
+          </p>
+
+          <p>
+            Out of the office you'll find me dreaming of basketball. I love watching NBA games and my favorite team is the Atlanta Hawks.
           </p>
 
           <a href="#contact" className='btn btn-primary'>Contact Me</a>

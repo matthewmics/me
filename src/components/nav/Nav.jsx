@@ -2,9 +2,10 @@ import React from 'react'
 import './nav.scss'
 import { AiOutlineHome, AiOutlineUser } from 'react-icons/ai'
 import { BiBook } from 'react-icons/bi'
-import { RiServiceLine } from 'react-icons/ri'
 import { BiMessageSquareDetail } from 'react-icons/bi'
+import { BsBriefcase } from 'react-icons/bs'
 import { useState } from 'react'
+import { TbCertificate } from 'react-icons/tb'
 
 const Nav = () => {
 
@@ -27,18 +28,25 @@ const Nav = () => {
         <AiOutlineUser />
       </a>
 
-      <a href="#experience"
-        onClick={() => setActiveNav('#experience')}
-        className={activeNav === '#experience' ? 'active' : ''}
+      <a href="#skills"
+        onClick={() => setActiveNav('#skills')}
+        className={activeNav === '#skills' ? 'active' : ''}
       >
         <BiBook />
       </a>
 
-      <a href="#services"
-        onClick={() => setActiveNav('#services')}
-        className={activeNav === '#services' ? 'active' : ''}
+      <a href="#experience"
+        onClick={() => setActiveNav('#experience')}
+        className={activeNav === '#experience' ? 'active' : ''}
       >
-        <RiServiceLine />
+        <BsBriefcase />
+      </a>
+
+      <a href="#certifications"
+        onClick={() => setActiveNav('#certifications')}
+        className={activeNav === '#certifications' ? 'active' : ''}
+      >
+        <TbCertificate />
       </a>
 
       <a href="#contact"
