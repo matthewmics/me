@@ -3,10 +3,19 @@ import './about.scss'
 import ME from '../../assets/me-about.jpg'
 import { IoSchoolOutline } from 'react-icons/io5'
 import { BsBriefcase } from 'react-icons/bs'
+import { useInView, useInViewEffect } from 'react-hook-inview'
 
-const About = () => {
+const About = ({setActiveNav}) => {
+
+  const ref = useInViewEffect(([entry]) => {
+    if (entry.isIntersecting) {
+      setActiveNav("#about");
+    }
+  })
+
+
   return (
-    <section id='about'>
+    <section id='about' ref={ref}>
       <h5>Get To Know</h5>
       <h2>About Me</h2>
       <div className="container about__container">
@@ -33,7 +42,7 @@ const About = () => {
           <p>
             Hi, I'm Matthew Miclat. I love computer programming. I started my career back in 2018 as a Java Programmer
             and years later was able to learn different programming languages such as C# and PHP. As a fullstack developer,
-            I am also comfortable in using the popular javascript frameworks like React and Angular. I am always eager to learn 
+            I am also comfortable in using the popular javascript frameworks like React and Angular. I am always eager to learn
             new things, recently I was able to learn RPA.
           </p>
 

@@ -3,10 +3,18 @@ import CTA from './CTA'
 import './header.scss'
 import ME from '../../assets/me.png'
 import HeaderSocials from './HeaderSocials'
+import { useInViewEffect } from 'react-hook-inview'
 
-const Header = () => {
+const Header = ({ setActiveNav }) => {
+
+  const ref = useInViewEffect(([entry]) => {
+    if (entry.isIntersecting) {
+      setActiveNav("#");
+    }
+  })
+
   return (
-    <header>
+    <header ref={ref}>
       <div className="container header__container">
         <h5>Hello, I'm</h5>
         <h1>Matthew Miclat</h1>

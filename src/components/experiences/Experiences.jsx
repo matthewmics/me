@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react'
 import './experiences.scss'
 import { BiCheck } from 'react-icons/bi'
+import { useInViewEffect } from 'react-hook-inview'
 
 const ServiceItem = ({ title, tags, descriptions }) => {
 
@@ -42,9 +43,16 @@ const ServiceItem = ({ title, tags, descriptions }) => {
 
 }
 
-const Services = () => {
+const Services = ({ setActiveNav }) => {
+
+  const ref = useInViewEffect(([entry]) => {
+    if (entry.isIntersecting) {
+      setActiveNav("#experience");
+    }
+  })
+
   return (
-    <section id="experience">
+    <section id="experience" ref={ref}>
 
       <h5>My Work Experience</h5>
       <h2>Experience</h2>

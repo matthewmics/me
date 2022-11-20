@@ -10,10 +10,18 @@ import CERT5 from '../../assets/cert5.jpg'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination, Navigation } from 'swiper'
+import { useInViewEffect } from 'react-hook-inview';
 
-const Certifications = () => {
+const Certifications = ({ setActiveNav }) => {
+
+  const ref = useInViewEffect(([entry]) => {
+    if (entry.isIntersecting) {
+      setActiveNav("#certifications");
+    }
+  })
+
   return (
-    <section id='certifications'>
+    <section id='certifications' ref={ref}>
       <h5>My Certifications</h5>
       <h2>Certifications</h2>
       <div className='certifications__container'>

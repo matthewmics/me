@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Header from './components/header/Header'
 import Nav from './components/nav/Nav'
 import Skills from './components/skills/Skills'
@@ -15,16 +15,18 @@ import "swiper/css/navigation";
 import 'swiper/css';
 
 const App = () => {
+
+  const [activeNav, setActiveNav] = useState('#');
   return (
     <>
-      <Header />
-      <Nav />
-      <About />
-      <Skills />
-      <Experiences />
-      <Portfolio />
-      <Certifications />
-      <Contact />
+      <Header setActiveNav={setActiveNav} />
+      <Nav activeNav={activeNav} />
+      <About setActiveNav={setActiveNav} />
+      <Skills setActiveNav={setActiveNav} />
+      <Experiences setActiveNav={setActiveNav} />
+      <Portfolio setActiveNav={setActiveNav} />
+      <Certifications setActiveNav={setActiveNav} />
+      <Contact setActiveNav={setActiveNav} />
       <Footer />
     </>
   )

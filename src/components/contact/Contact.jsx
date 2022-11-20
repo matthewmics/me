@@ -1,9 +1,17 @@
 import React from 'react'
+import { useInViewEffect } from 'react-hook-inview';
 import './contact.scss'
 
-const Contact = () => {
+const Contact = ({ setActiveNav }) => {
+
+  const ref = useInViewEffect(([entry]) => {
+    if (entry.isIntersecting) {
+      setActiveNav("#contact");
+    }
+  })
+
   return (
-    <section id="contact">
+    <section id="contact" ref={ref}>
       <h5>Say Hello</h5>
       <h2>Contact Me</h2>
 

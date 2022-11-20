@@ -2,6 +2,7 @@ import React, { Fragment } from 'react'
 import './skills.scss'
 
 import { BsPatchCheckFill } from 'react-icons/bs'
+import { useInViewEffect } from 'react-hook-inview'
 
 
 const SkillItem = ({ title, skills }) => {
@@ -30,9 +31,16 @@ const SkillItem = ({ title, skills }) => {
 
 }
 
-const Skills = () => {
+const Skills = ({ setActiveNav }) => {
+
+  const ref = useInViewEffect(([entry]) => {
+    if (entry.isIntersecting) {
+      setActiveNav("#skills");
+    }
+  })
+
   return (
-    <section id="skills">
+    <section id="skills" ref={ref}>
       <h5>What Skills I Have</h5>
       <h2>My Skills</h2>
 
