@@ -1,6 +1,6 @@
 import React from 'react'
 
-const PortfolioItem = ({ thumbnail, title, tags, onScreenshotsClicked }) => {
+const PortfolioItem = ({ thumbnail, title, tags, onScreenshotsClicked, githubLink }) => {
     return (
         <article className="portfolio__item">
             <div className="portfolio__item-image">
@@ -20,7 +20,7 @@ const PortfolioItem = ({ thumbnail, title, tags, onScreenshotsClicked }) => {
                 }
             </div>
             <div className="portfolio__item-cta">
-                <a href="https://github.com/" className='btn btn-sm' target="_blank">GitHub</a>
+                <a href={githubLink} className='btn btn-sm' target="_blank">GitHub</a>
                 <a className='btn btn-primary btn-sm' target="_blank"
                     onClick={() => {
                         onScreenshotsClicked && onScreenshotsClicked();

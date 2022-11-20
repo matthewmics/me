@@ -5,39 +5,51 @@
         position: fixed;
         top: 0%;
         bottom: 0%;
-        background: rgba(0,0,0,0.7);
+        background: rgba(0, 0, 0, 0.7);
         backdrop-filter: blur(5px);
         z-index: 9999;
         overflow: auto;
 
-        .wrapper {
-            padding: 3rem 0;
-            display: flex;
+        .portfolio__modal-content {
+            padding: 2rem 5rem;
             flex-direction: column;
             height: 100%;
-            align-items: center;
+            display: flex;
 
-            // .btn-close {
-            //     width: 
-            // }
-
-            .screenshots {
+            .portfolio__modal-swiper-wrapper {
                 flex-grow: 1;
-                .portfolio__modal-swiper {
-                    
-                    .swiper-content {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: center;
+                overflow: hidden;
 
-                        img {
-                            height: auto; width: 100vh;
-                            user-select: none;
+                .portfolio__modal-swiper {
+                    height: 100%;
+                    overflow: hidden;
+
+                    .portfolio__modal-swiper-content {
+                        height: 93%;
+                        overflow: hidden;
+
+                        .portfolio__modal-img-wrapper {
+                            overflow: hidden;
+                            height: 100%;
+                            position: relative;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            img {
+                                width: 50%;
+                                user-select: none !important;
+                                display: block;
+                                margin: auto 0px;
+                            }
                         }
                     }
-
                 }
+            }
+
+
+            .portfolio__modal-btn-close {
+                margin: auto;
             }
         }
     }
@@ -100,7 +112,7 @@
 }
 
 .portfolio__item-description {
-    & > h3 {
+    &>h3 {
         margin-bottom: 0;
     }
 
@@ -121,6 +133,28 @@
         gap: 1.2rem;
         width: var(--container-width-md) !important;
     }
+
+    #portfolio {
+        .portfolio__modal-swiper-content {
+            height: 100%;
+
+
+
+            .portfolio__modal-img-wrapper {
+
+                img {
+                    width: 100% !important;
+                }
+            }
+        }
+
+        .portfolio__modal-content {
+            padding: 1rem !important;
+        }
+
+
+
+    }
 }
 
 /* ====== MEDIA QUERIES (SMALL DEVICES) */
@@ -129,5 +163,16 @@
         grid-template-columns: 1fr;
         gap: 1rem;
         width: var(--container-width-sm) !important;
+    }
+
+    #portfolio {
+        .portfolio__modal-swiper-content {
+            height: 100%;
+        }
+
+        .portfolio__modal-content {
+            padding: 1rem !important;
+        }
+
     }
 }
