@@ -18,7 +18,7 @@ const Certifications = ({ setActiveNav }) => {
     if (entry.isIntersecting) {
       setActiveNav("#certifications");
     }
-  }, { threshold: 1 })
+  }, { threshold: 0.5 })
 
   return (
     <section id='certifications' ref={ref}>
