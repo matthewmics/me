@@ -11,7 +11,7 @@ const Header = ({ setActiveNav }) => {
     if (entry.isIntersecting) {
       setActiveNav("#");
     }
-  })
+  }, { threshold: 0.5 })
 
   return (
     <header ref={ref}>

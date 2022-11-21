@@ -37,7 +37,7 @@ const Skills = ({ setActiveNav }) => {
     if (entry.isIntersecting) {
       setActiveNav("#skills");
     }
-  })
+  }, {threshold: 0.5})
 
   return (
     <section id="skills" ref={ref}>

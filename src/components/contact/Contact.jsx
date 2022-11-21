@@ -8,7 +8,7 @@ const Contact = ({ setActiveNav }) => {
     if (entry.isIntersecting) {
       setActiveNav("#contact");
     }
-  })
+  }, { threshold: 0.5 })
 
   return (
     <section id="contact" ref={ref}>

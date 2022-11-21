@@ -11,7 +11,7 @@ const About = ({setActiveNav}) => {
     if (entry.isIntersecting) {
       setActiveNav("#about");
     }
-  })
+  }, {threshold: 0.5})
 
 
   return (

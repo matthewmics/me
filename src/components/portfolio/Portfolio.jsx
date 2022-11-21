@@ -9,13 +9,20 @@ import { useEffect } from 'react'
 import { useRef } from 'react'
 import { Navigation, Pagination } from 'swiper'
 import { SwiperSlide, Swiper } from 'swiper/react'
+import { useInViewEffect } from 'react-hook-inview'
 
 const spikeRollScreenshotData = { path: '/spikeroll', total: 19 }
 const inventoryScreenshotData = { path: '/inventory', total: 15 }
 const bettingScreenshotData = { path: '/betting', total: 27 }
 const facerecogScreenshotData = { path: '/facerecog', total: 10 }
 
-const Portfolio = () => {
+const Portfolio = ({setActiveNav}) => {
+
+  const ref = useInViewEffect(([entry]) => {
+    if (entry.isIntersecting) {
+      setActiveNav("#portfolio");
+    }
+  }, {threshold: 0.25})
 
   const screenshotsModalRef = useRef(null);
 
@@ -44,7 +51,7 @@ const Portfolio = () => {
   }
 
   return (
-    <section id="portfolio">
+    <section id="portfolio" ref={ref}>
       <h5>My Sample Works</h5>
       <h2>Portfolio</h2>
 

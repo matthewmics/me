@@ -2,7 +2,7 @@ import React from 'react'
 import './nav.scss'
 import { AiOutlineHome, AiOutlineUser } from 'react-icons/ai'
 import { BiBook } from 'react-icons/bi'
-import { BiMessageSquareDetail } from 'react-icons/bi'
+import { BiMessageSquareDetail, BiLibrary } from 'react-icons/bi'
 import { BsBriefcase } from 'react-icons/bs'
 import { useState } from 'react'
 import { TbCertificate } from 'react-icons/tb'
@@ -35,6 +35,12 @@ const Nav = ({ activeNav }) => {
         className={activeNav === '#experience' ? 'active' : ''}
       >
         <BsBriefcase />
+      </a>
+
+      <a href="#portfolio"
+        className={activeNav === '#portfolio' ? 'active' : ''}
+      >
+        <BiLibrary />
       </a>
 
       <a href="#certifications"

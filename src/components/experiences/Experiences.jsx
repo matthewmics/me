@@ -47,9 +47,10 @@ const Services = ({ setActiveNav }) => {
 
   const ref = useInViewEffect(([entry]) => {
     if (entry.isIntersecting) {
+      console.log("test experience")
       setActiveNav("#experience");
     }
-  })
+  }, { threshold: 0.25 })
 
   return (
     <section id="experience" ref={ref}>
